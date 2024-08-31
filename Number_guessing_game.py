@@ -1,16 +1,16 @@
 from random import randint
 
 
-choice_pc = randint(1, 101)
+choice_pc = randint(1, 101) # PC choice for the entire game.
 #print(choice_pc)
 
 def game():
     """ Guessing game with numbers from 1-100.
      The PC has a random selection and the user chooses himself"""
-    user_choice = input("Enter a number between 1 and 100: ")
-    if user_choice.isdigit():
-        user_choice = int(user_choice)
-        if user_choice in range(0, 101):
+    user_choice = input("Enter a number between 1 and 100: ") # User's choice for one turn
+    if user_choice.isdigit(): # checking if the input from the user is really a number
+        user_choice = int(user_choice) # conversion of the data type from STR to INT by the user
+        if user_choice in range(0, 101): # Checking if a number is in the range from 1-100
             if user_choice < choice_pc:
                 print("Too small!")
                 return game()
