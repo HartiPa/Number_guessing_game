@@ -2,7 +2,7 @@ from random import randint
 
 
 choice_pc = randint(1, 101)
-print(choice_pc)
+#print(choice_pc)
 
 def game():
     """ Guessing game with numbers from 1-100.
